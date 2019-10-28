@@ -1,0 +1,25 @@
+<div class="jumbotron" style="background-color: rgb(177, 225, 255); color: #000;">
+  <h1 class="display-4">Bem vindo ao Blog do Node</h1>
+  <p class="lead">Esse é um simples Blog para estudos das tecnologias Node.js + MongoDB + Express</p>
+  <hr class="my-4">
+  <p>Leia aqui sobre as novidades no mundo dos cinemas.</p>
+  <p class="lead">
+    <a class="btn btn-success btn-lg" href="#" role="button">Crie uma conta</a>
+  </p>
+</div>
+<hr>
+<h2>Postagens Recentes:</h2>
+{{#each postagens}}
+    <div class="card mt-3 text-black mb-3" style="background-color: rgb(238, 255, 248);">
+        <div class="card-body">
+            <h4>{{titulo}}</h4>
+            <p>{{descricao}}</p>
+            <small>{{categoria.nome}}</small><br>
+            <small>Data de publicação: {{date}}</small>
+            <hr>
+            <a class="mt-2 btn btn-dark" href="/postagem/{{slug}}">Ler mais</a>
+        </div>
+    </div>
+{{else}}
+    <h3 class="mt-3">Sem postagens</h3>
+{{/each}}

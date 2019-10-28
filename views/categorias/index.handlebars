@@ -1,0 +1,7 @@
+<h1>Categorias</h1>
+<hr>
+{{#each categorias}}
+    <a class="mt-2 btn btn-success" href="/categorias/{{slug}}">{{nome}}</a>
+{{else}}
+    <h3 class="mt-3">Sem categorias</h3>
+{{/each}}
